@@ -1,0 +1,451 @@
+.contact-page {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* HERO */
+
+.contact-hero {
+  padding: 150px 20px 90px;
+  text-align: center;
+  background: #f5f8ff;
+}
+
+.contact-hero h1 {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 52px;
+  color: #111827;
+}
+
+.contact-hero h1 span {
+  color: #0a4dcc;
+}
+
+.contact-hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* MAIN */
+
+.contact-main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 20px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* INFO */
+
+.contact-info h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #111827;
+  margin: 20px 0;
+}
+
+.contact-info h2 span {
+  color: #0a4dcc;
+}
+
+.contact-info > p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* OPTIONS */
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-option:hover {
+  transform: translateX(5px);
+  border-color: #0a4dcc;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef4ff;
+  border-radius: 10px;
+  font-size: 23px;
+}
+
+.contact-option span,
+.contact-option strong {
+  display: block;
+}
+
+.contact-option span {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.contact-option strong {
+  color: #111827;
+}
+
+/* FORM */
+
+.contact-form-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 15px 50px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e5eaf2;
+}
+
+.contact-form-card h3 {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.contact-form-card > p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #111827;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0a4dcc;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #0a4dcc;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-submit-btn:hover {
+  background: #083b9c;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .contact-main {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero h1 {
+    font-size: 42px;
+  }
+
+  .contact-info h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 120px 20px 70px;
+  }
+
+  .contact-hero h1 {
+    font-size: 34px;
+  }
+
+  .contact-form-card {
+    padding: 25px;
+  }
+}
+
+/* =========================
+   CONTACT BENEFITS
+========================= */
+
+.contact-benefits {
+  margin: 25px 0 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #334155;
+  font-size: 15px;
+}
+
+.contact-benefits span {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eaf1ff;
+  color: #0a4dcc;
+
+  border-radius: 50%;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0a4dcc;
+
+  box-shadow: 0 0 0 3px rgba(10, 77, 204, 0.08);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.contact-submit-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #0a4dcc;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  background: #083b9c;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(10, 77, 204, 0.2);
+}
+
+
+
+/* ========================================
+   BUSINESS INFORMATION
+======================================== */
+
+.business-details {
+  margin-top: 35px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #e1e8f2;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(10, 77, 204, 0.08);
+}
+
+/* Heading */
+
+.business-details h3 {
+  margin: 0 0 22px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eaf0f8;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: #123b8c;
+}
+
+/* Each Row */
+
+.business-detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  padding: 14px 8px;
+
+  border-bottom: 1px solid #edf1f6;
+}
+
+/* Last Row */
+
+.business-detail-row:last-child {
+  border-bottom: none;
+}
+
+/* Left Side */
+
+.business-detail-row span {
+  color: #667085;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Right Side */
+
+.business-detail-row strong {
+  color: #123b8c;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Hover Effect */
+
+.business-detail-row:hover {
+  background: #f8faff;
+  border-radius: 8px;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .business-details {
+    margin-top: 25px;
+    padding: 20px;
+  }
+
+  .business-details h3 {
+    font-size: 21px;
+  }
+
+  .business-detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 13px 5px;
+  }
+
+  .business-detail-row strong {
+    text-align: left;
+    word-break: break-word;
+  }
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .contact-benefits {
+    margin-bottom: 25px;
+  }
+
+  .contact-form-card {
+    padding: 25px 20px;
+  }
+
+}
