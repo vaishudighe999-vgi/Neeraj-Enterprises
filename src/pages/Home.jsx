@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -6,538 +5,435 @@ import "./Home.css";
 const Home = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  const services = [
+    {
+      icon: "📱",
+      title: "Social Media Marketing",
+      text: "Build your brand presence and engage your audience across social media platforms."
+    },
+    {
+      icon: "📢",
+      title: "Meta Ads",
+      text: "Reach the right customers with high-performing Facebook and Instagram advertising campaigns."
+    },
+    {
+      icon: "🔎",
+      title: "Google Ads",
+      text: "Generate targeted traffic, leads and sales with result-driven Google PPC campaigns."
+    },
+    {
+      icon: "🚀",
+      title: "Search Engine Optimization",
+      text: "Improve your Google rankings and attract more organic visitors to your website."
+    },
+    {
+      icon: "💻",
+      title: "Website Development",
+      text: "Professional, responsive and conversion-focused websites for modern businesses."
+    },
+    {
+      icon: "🛒",
+      title: "E-commerce Development",
+      text: "Create powerful online stores designed to increase customer engagement and sales."
+    },
+    {
+      icon: "🎯",
+      title: "Landing Page Design",
+      text: "High-converting landing pages designed specifically for your marketing campaigns."
+    },
+    {
+      icon: "💬",
+      title: "WhatsApp Business API",
+      text: "Connect with customers, automate communication and improve business conversions."
+    },
+    {
+      icon: "📍",
+      title: "Google Business Profile",
+      text: "Improve your local visibility and help nearby customers discover your business."
+    },
+    {
+      icon: "🎨",
+      title: "Graphic Design & Branding",
+      text: "Create a strong and professional visual identity for your business."
+    },
+    {
+      icon: "🎬",
+      title: "Video Editing & Reels",
+      text: "Create engaging short-form videos and reels that capture attention."
+    },
+    {
+      icon: "✍️",
+      title: "Content Marketing",
+      text: "Create valuable content that builds trust, attracts customers and grows your brand."
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "What digital marketing services do you provide?",
+      answer:
+        "We provide Social Media Marketing, Meta Ads, Google Ads, SEO, Website Development, E-commerce Development, Landing Pages, WhatsApp Business API, Google Business Profile Optimization, Branding, Video Editing and Content Marketing."
+    },
+    {
+      question: "Can you help a new business grow online?",
+      answer:
+        "Yes. We can create a customized digital marketing strategy based on your business goals, target audience and budget."
+    },
+    {
+      question: "Do you provide website development?",
+      answer:
+        "Yes. We develop responsive, modern and business-focused websites designed to provide a professional online presence."
+    },
+    {
+      question: "Do you manage Facebook and Instagram Ads?",
+      answer:
+        "Yes. We can help plan, create and optimize Meta advertising campaigns for better reach, leads and conversions."
+    },
+    {
+      question: "How can I get started?",
+      answer:
+        "Simply contact us through the Contact Us page or WhatsApp. Our team can understand your requirements and suggest the right digital marketing solution."
+    }
+  ];
 
   return (
-    <main className="home">
+    <div className="home">
 
-      {/* =========================
-          HERO SECTION
-      ========================= */}
-
-      <section className="hero">
-
+      {/* ================= HERO ================= */}
+      <section className="hero-section">
         <div className="hero-container">
 
-          {/* LEFT CONTENT */}
-
           <div className="hero-content">
-
             <span className="hero-badge">
-              🏢 NEERAJ ENTERPRISES
+              DIGITAL MARKETING AGENCY
             </span>
 
             <h1>
-              Fresh Fruits & Vegetables
-              <span> Wholesale Trading</span>
+              Grow Your Business
+              <span> With Digital Marketing</span>
             </h1>
 
             <p>
-              NEERAJ ENTERPRISES is a Micro Proprietary Enterprise based in
-              Indore, Madhya Pradesh, engaged in wholesale trading of fresh
-              fruits and vegetables and business supply.
+              We help businesses build a powerful online presence,
+              reach the right audience, generate quality leads and
+              increase sales through result-driven digital marketing
+              strategies.
             </p>
 
             <div className="hero-buttons">
-
               <Link to="/contact" className="primary-btn">
-                Contact Us
+                Get Started
               </Link>
 
-              <a
-                href="https://wa.me/919907406837"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="secondary-btn"
-              >
-                WhatsApp Us
-              </a>
-
+              <Link to="/services" className="secondary-btn">
+                Explore Services
+              </Link>
             </div>
-
-            {/* BUSINESS HIGHLIGHTS */}
 
             <div className="hero-trust">
-
               <div>
-                <strong>2022</strong>
-                <span>Established</span>
+                <strong>12+</strong>
+                <span>Services</span>
               </div>
 
               <div>
-                <strong>Micro</strong>
-                <span>Enterprise</span>
+                <strong>100%</strong>
+                <span>Business Focused</span>
               </div>
 
               <div>
-                <strong>Indore</strong>
-                <span>Madhya Pradesh</span>
+                <strong>24/7</strong>
+                <span>Support</span>
               </div>
-
             </div>
-
           </div>
 
+          <div className="hero-card-wrapper">
+            <div className="hero-main-card">
+              <div className="marketing-icon">📈</div>
 
-          {/* RIGHT VISUAL */}
+              <h3>Digital Growth</h3>
 
-          <div className="hero-visual">
-
-            <div className="dashboard-card">
-
-              <div className="card-header">
-
-                <span>Business Information</span>
-
-                <span className="status">
-                  ● Active
-                </span>
-
-              </div>
-
+              <p>
+                Smart strategies. Better visibility.
+                More customers.
+              </p>
 
               <div className="growth-chart">
-
-                <div className="chart-line"></div>
-
-                <div className="chart-point point-1"></div>
-                <div className="chart-point point-2"></div>
-                <div className="chart-point point-3"></div>
-                <div className="chart-point point-4"></div>
-                <div className="chart-point point-5"></div>
-
+                <div className="chart-bar bar-one"></div>
+                <div className="chart-bar bar-two"></div>
+                <div className="chart-bar bar-three"></div>
+                <div className="chart-bar bar-four"></div>
+                <div className="chart-bar bar-five"></div>
               </div>
-
 
               <div className="growth-info">
-
-                <div>
-                  <small>Business Type</small>
-                  <strong>Proprietary</strong>
-                </div>
-
-                <div>
-                  <small>Activity</small>
-                  <strong>Wholesale</strong>
-                </div>
-
+                <span>Business Growth</span>
+                <strong>+85%</strong>
               </div>
-
             </div>
 
-
-            {/* FLOATING CARDS */}
-
-            <div className="floating-card leads-card">
-
-              <span>Products</span>
-
-              <strong>🍎 Fruits</strong>
-
+            <div className="floating-card floating-one">
+              <span>🎯</span>
+              <div>
+                <strong>Target Audience</strong>
+                <small>Right People</small>
+              </div>
             </div>
 
-
-            <div className="floating-card revenue-card">
-
-              <span>Supply</span>
-
-              <strong>🥦 Vegetables</strong>
-
+            <div className="floating-card floating-two">
+              <span>🚀</span>
+              <div>
+                <strong>Online Growth</strong>
+                <small>Result Driven</small>
+              </div>
             </div>
-
           </div>
 
         </div>
-
       </section>
 
-
-      {/* =========================
-          ABOUT BUSINESS SECTION
-      ========================= */}
-
+      {/* ================= SERVICES ================= */}
       <section className="services-section">
-
         <div className="section-heading">
-
-          <span className="section-badge">
-            About Our Business
-          </span>
+          <span>WHAT WE DO</span>
 
           <h2>
-            Trusted Wholesale
-            <span> Trading Business</span>
+            Digital Marketing Services
+            <br />
+            <strong>That Grow Your Business</strong>
           </h2>
 
           <p>
-            NEERAJ ENTERPRISES operates from Indore, Madhya Pradesh and
-            focuses on wholesale trading of fruits and vegetables for
-            business requirements.
+            Everything you need to build your brand, reach your audience
+            and grow your business online.
           </p>
-
         </div>
-
 
         <div className="services-grid">
+          {services.map((service, index) => (
+            <div className="service-card" key={index}>
 
+              <div className="service-icon">
+                {service.icon}
+              </div>
 
-          {/* CARD 1 */}
+              <h3>{service.title}</h3>
 
-          <div className="service-card">
+              <p>{service.text}</p>
 
-            <div className="service-icon">
-              🍎
+              <Link to="/services">
+                Learn More →
+              </Link>
+
             </div>
-
-            <h3>
-              Fruits Wholesale
-            </h3>
-
-            <p>
-              Wholesale trading and supply of fruits for business and
-              commercial requirements.
-            </p>
-
-            <Link to="/contact">
-              Make Enquiry →
-            </Link>
-
-          </div>
-
-
-          {/* CARD 2 */}
-
-          <div className="service-card">
-
-            <div className="service-icon">
-              🥦
-            </div>
-
-            <h3>
-              Vegetables Wholesale
-            </h3>
-
-            <p>
-              Wholesale trading of vegetables for business supply and
-              commercial requirements.
-            </p>
-
-            <Link to="/contact">
-              Make Enquiry →
-            </Link>
-
-          </div>
-
-
-          {/* CARD 3 */}
-
-          <div className="service-card">
-
-            <div className="service-icon">
-              📦
-            </div>
-
-            <h3>
-              Bulk Supply
-            </h3>
-
-            <p>
-              Wholesale supply solutions for customers looking for
-              fruits and vegetables in bulk quantities.
-            </p>
-
-            <Link to="/contact">
-              Make Enquiry →
-            </Link>
-
-          </div>
-
-
-          {/* CARD 4 */}
-
-          <div className="service-card">
-
-            <div className="service-icon">
-              🚚
-            </div>
-
-            <h3>
-              Fresh Produce Trading
-            </h3>
-
-            <p>
-              Business focused on wholesale trading of fresh fruits and
-              vegetables.
-            </p>
-
-            <Link to="/contact">
-              Make Enquiry →
-            </Link>
-
-          </div>
-
-
-          {/* CARD 5 */}
-
-          <div className="service-card">
-
-            <div className="service-icon">
-              🤝
-            </div>
-
-            <h3>
-              Business Supply
-            </h3>
-
-            <p>
-              Supporting business customers with wholesale produce
-              requirements.
-            </p>
-
-            <Link to="/contact">
-              Make Enquiry →
-            </Link>
-
-          </div>
-
-
-          {/* CARD 6 */}
-
-          <div className="service-card">
-
-            <div className="service-icon">
-              📍
-            </div>
-
-            <h3>
-              Indore Based Business
-            </h3>
-
-            <p>
-              Based in Indore, Madhya Pradesh with a focus on wholesale
-              trading activities.
-            </p>
-
-            <Link to="/contact">
-              Contact Us →
-            </Link>
-
-          </div>
-
+          ))}
         </div>
-
-
-        <div className="services-button">
-
-          <Link
-            to="/contact"
-            className="view-services-btn"
-          >
-            Send Business Enquiry →
-          </Link>
-
-        </div>
-
       </section>
 
-
-      {/* =========================
-          WHY CHOOSE US
-      ========================= */}
-
+      {/* ================= WHY CHOOSE US ================= */}
       <section className="why-section">
-
         <div className="why-container">
 
-
-          {/* LEFT CONTENT */}
-
           <div className="why-content">
-
-            <span className="section-badge">
-              Why Choose NEERAJ ENTERPRISES
+            <span className="section-label">
+              WHY CHOOSE US
             </span>
 
             <h2>
-              Business Focused
-              <span> Wholesale Trading</span>
+              We Don't Just Market.
+              <span> We Grow Businesses.</span>
             </h2>
 
             <p>
-              NEERAJ ENTERPRISES is a registered Micro Proprietary
-              Enterprise operating in the wholesale trading sector.
-              Our business activity focuses on fruits and vegetables.
+              Your business deserves more than random marketing.
+              We focus on understanding your goals, your audience
+              and your market before creating a digital strategy.
             </p>
 
-            <Link
-              to="/contact"
-              className="why-btn"
-            >
-              Contact For Enquiry →
+            <div className="why-list">
+
+              <div className="why-item">
+                <div className="why-number">01</div>
+                <div>
+                  <h3>Result-Oriented Strategy</h3>
+                  <p>
+                    Every campaign is planned around measurable
+                    business objectives.
+                  </p>
+                </div>
+              </div>
+
+              <div className="why-item">
+                <div className="why-number">02</div>
+                <div>
+                  <h3>Data-Driven Approach</h3>
+                  <p>
+                    We use insights and performance data to improve
+                    marketing decisions.
+                  </p>
+                </div>
+              </div>
+
+              <div className="why-item">
+                <div className="why-number">03</div>
+                <div>
+                  <h3>Customized Solutions</h3>
+                  <p>
+                    We create strategies according to your business,
+                    audience and budget.
+                  </p>
+                </div>
+              </div>
+
+              <div className="why-item">
+                <div className="why-number">04</div>
+                <div>
+                  <h3>Continuous Support</h3>
+                  <p>
+                    We stay connected with you throughout your
+                    digital growth journey.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="why-stats">
+
+            <div className="stat-box">
+              <strong>12+</strong>
+              <span>Digital Services</span>
+            </div>
+
+            <div className="stat-box">
+              <strong>360°</strong>
+              <span>Marketing Solutions</span>
+            </div>
+
+            <div className="stat-box">
+              <strong>100%</strong>
+              <span>Business Focus</span>
+            </div>
+
+            <div className="stat-box">
+              <strong>24/7</strong>
+              <span>Support</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= PROCESS ================= */}
+      <section className="process-section">
+
+        <div className="section-heading">
+          <span>OUR PROCESS</span>
+
+          <h2>
+            Simple Process.
+            <strong> Powerful Results.</strong>
+          </h2>
+
+          <p>
+            We follow a clear and transparent process to help your
+            business grow online.
+          </p>
+        </div>
+
+        <div className="process-grid">
+
+          <div className="process-card">
+            <span>01</span>
+            <h3>Understand</h3>
+            <p>
+              We understand your business, goals and target audience.
+            </p>
+          </div>
+
+          <div className="process-card">
+            <span>02</span>
+            <h3>Plan</h3>
+            <p>
+              We create a customized digital marketing strategy.
+            </p>
+          </div>
+
+          <div className="process-card">
+            <span>03</span>
+            <h3>Execute</h3>
+            <p>
+              Our team implements campaigns and creative strategies.
+            </p>
+          </div>
+
+          <div className="process-card">
+            <span>04</span>
+            <h3>Optimize</h3>
+            <p>
+              We analyze performance and continuously improve results.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= ABOUT ================= */}
+      <section className="about-home-section">
+
+        <div className="about-home-container">
+
+          <div className="about-home-content">
+            <span className="section-label">
+              ABOUT OUR AGENCY
+            </span>
+
+            <h2>
+              Your Digital Growth
+              <span> Is Our Priority</span>
+            </h2>
+
+            <p>
+              We help businesses establish a strong digital presence
+              through creative, strategic and performance-focused
+              marketing solutions.
+            </p>
+
+            <p>
+              From social media and paid advertising to SEO,
+              website development and branding, we provide
+              complete digital solutions under one roof.
+            </p>
+
+            <Link to="/about" className="about-btn">
+              Learn More About Us →
             </Link>
-
           </div>
 
+          <div className="about-home-card">
 
-          {/* RIGHT FEATURES */}
-
-          <div className="why-features">
-
-
-            {/* FEATURE 1 */}
-
-            <div className="feature-card">
-
-              <div className="feature-icon">
-                🏢
-              </div>
-
-              <div>
-
-                <h3>
-                  Registered Enterprise
-                </h3>
-
-                <p>
-                  NEERAJ ENTERPRISES is registered as a Micro Enterprise
-                  under Udyam Registration.
-                </p>
-
-              </div>
-
+            <div className="about-card-icon">
+              💡
             </div>
 
+            <h3>
+              Smart Digital Strategies
+            </h3>
 
-            {/* FEATURE 2 */}
+            <p>
+              We combine creativity, technology and marketing
+              to create solutions that help businesses move forward.
+            </p>
 
-            <div className="feature-card">
-
-              <div className="feature-icon">
-                🍎
-              </div>
-
-              <div>
-
-                <h3>
-                  Fruits & Vegetables
-                </h3>
-
-                <p>
-                  Our registered business activity includes wholesale
-                  trading of fruits and vegetables.
-                </p>
-
-              </div>
-
+            <div className="about-points">
+              <span>✓ Creative Thinking</span>
+              <span>✓ Modern Technology</span>
+              <span>✓ Performance Marketing</span>
+              <span>✓ Customer Focused</span>
             </div>
-
-
-            {/* FEATURE 3 */}
-
-            <div className="feature-card">
-
-              <div className="feature-icon">
-                📍
-              </div>
-
-              <div>
-
-                <h3>
-                  Indore Based
-                </h3>
-
-                <p>
-                  Business premises are located in BK Sindhi Colony,
-                  Indore, Madhya Pradesh.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            {/* FEATURE 4 */}
-
-            <div className="feature-card">
-
-              <div className="feature-icon">
-                🤝
-              </div>
-
-              <div>
-
-                <h3>
-                  Business Enquiries
-                </h3>
-
-                <p>
-                  Contact us for wholesale fruits and vegetables
-                  trading and supply enquiries.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* BUSINESS STATS */}
-
-        <div className="stats-container">
-
-          <div className="stat-item">
-
-            <strong>
-              2022
-            </strong>
-
-            <span>
-              Business Started
-            </span>
-
-          </div>
-
-
-          <div className="stat-item">
-
-            <strong>
-              Micro
-            </strong>
-
-            <span>
-              Enterprise Type
-            </span>
-
-          </div>
-
-
-          <div className="stat-item">
-
-            <strong>
-              Indore
-            </strong>
-
-            <span>
-              Business Location
-            </span>
-
-          </div>
-
-
-          <div className="stat-item">
-
-            <strong>
-              1
-            </strong>
-
-            <span>
-              Registered Employment
-            </span>
 
           </div>
 
@@ -545,923 +441,98 @@ const Home = () => {
 
       </section>
 
-
-      {/* =========================
-          BUSINESS INFORMATION
-      ========================= */}
-
-      <section className="portfolio-section">
-
-        <div className="section-heading">
-
-          <span className="section-badge">
-            Business Information
-          </span>
-
-          <h2>
-            NEERAJ ENTERPRISES
-            <span> At A Glance</span>
-          </h2>
-
-          <p>
-            Basic business information based on the enterprise
-            registration details.
-          </p>
-
-        </div>
-
-
-        <div className="portfolio-grid">
-
-
-          {/* BUSINESS NAME */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-1">
-
-              <span className="portfolio-category">
-                Enterprise
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  NEERAJ ENTERPRISES
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                NEERAJ ENTERPRISES
-              </h3>
-
-              <p>
-                A Micro Proprietary Enterprise based in Indore,
-                Madhya Pradesh.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* BUSINESS ACTIVITY */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-2">
-
-              <span className="portfolio-category">
-                Business Activity
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  Wholesale Trading
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                Wholesale Trading
-              </h3>
-
-              <p>
-                Wholesale trading activity focused on fruits and
-                vegetables.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* OWNER */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-3">
-
-              <span className="portfolio-category">
-                Proprietor
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  Shri Neeraj Sen
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                Shri Neeraj Sen
-              </h3>
-
-              <p>
-                Proprietor of NEERAJ ENTERPRISES.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* ESTABLISHED */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-4">
-
-              <span className="portfolio-category">
-                Since 2022
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  01 August 2022
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                Established in 2022
-              </h3>
-
-              <p>
-                Date of incorporation and commencement of business:
-                01/08/2022.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* LOCATION */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-5">
-
-              <span className="portfolio-category">
-                Location
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  Indore
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                Indore, Madhya Pradesh
-              </h3>
-
-              <p>
-                Business premises located in BK Sindhi Colony,
-                Sindhi Colony Main Road, Indore.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* UDYAM */}
-
-          <div className="portfolio-card">
-
-            <div className="portfolio-image portfolio-bg-6">
-
-              <span className="portfolio-category">
-                Udyam Registration
-              </span>
-
-              <div className="portfolio-overlay">
-                <span>
-                  Registered Enterprise
-                </span>
-              </div>
-
-            </div>
-
-            <div className="portfolio-content">
-
-              <h3>
-                UDYAM-MP-20-0027028
-              </h3>
-
-              <p>
-                Registered as a Micro Enterprise under Udyam
-                Registration.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div className="portfolio-button">
-
-          <Link
-            to="/contact"
-            className="view-portfolio-btn"
-          >
-            Contact NEERAJ ENTERPRISES →
-          </Link>
-
-        </div>
-
-      </section>
-
-
-      {/* =========================
-          BUSINESS HIGHLIGHTS
-      ========================= */}
-
-      <section className="testimonials-section">
-
-        <div className="section-heading">
-
-          <span className="section-badge">
-            Our Business
-          </span>
-
-          <h2>
-            Focused On
-            <span> Wholesale Trading</span>
-          </h2>
-
-          <p>
-            Our business is focused on wholesale trading of fruits
-            and vegetables.
-          </p>
-
-        </div>
-
-
-        <div className="testimonials-grid">
-
-
-          {/* CARD 1 */}
-
-          <div className="testimonial-card">
-
-            <div className="testimonial-stars">
-              🍎
-            </div>
-
-            <p className="testimonial-text">
-              Wholesale trading of fruits for business and commercial
-              requirements.
-            </p>
-
-            <div className="client-info">
-
-              <div className="client-avatar">
-                F
-              </div>
-
-              <div>
-
-                <h3>
-                  Fruits
-                </h3>
-
-                <span>
-                  Wholesale Trading
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* CARD 2 */}
-
-          <div className="testimonial-card">
-
-            <div className="testimonial-stars">
-              🥦
-            </div>
-
-            <p className="testimonial-text">
-              Wholesale trading of vegetables for business and
-              commercial requirements.
-            </p>
-
-            <div className="client-info">
-
-              <div className="client-avatar">
-                V
-              </div>
-
-              <div>
-
-                <h3>
-                  Vegetables
-                </h3>
-
-                <span>
-                  Wholesale Trading
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          {/* CARD 3 */}
-
-          <div className="testimonial-card">
-
-            <div className="testimonial-stars">
-              📦
-            </div>
-
-            <p className="testimonial-text">
-              Business enquiries are welcome for wholesale fruits and
-              vegetables supply requirements.
-            </p>
-
-            <div className="client-info">
-
-              <div className="client-avatar">
-                B
-              </div>
-
-              <div>
-
-                <h3>
-                  Business Supply
-                </h3>
-
-                <span>
-                  Wholesale Enquiries
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* BUSINESS STATUS */}
-
-        <div className="overall-rating">
-
-          <strong>
-            MICRO
-          </strong>
-
-          <div>
-
-            <span className="rating-stars">
-              ✓ ✓ ✓
-            </span>
-
-            <small>
-              Registered Enterprise
-            </small>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =========================
-          FAQ SECTION
-      ========================= */}
-
+      {/* ================= FAQ ================= */}
       <section className="faq-section">
 
         <div className="section-heading">
 
-          <span className="section-badge">
-            FAQ
-          </span>
+          <span>FAQ</span>
 
           <h2>
             Frequently Asked
-            <span> Questions</span>
+            <strong> Questions</strong>
           </h2>
 
           <p>
-            Find answers to common questions about NEERAJ ENTERPRISES.
+            Find answers to some common questions about our services.
           </p>
 
         </div>
-
 
         <div className="faq-container">
 
+          {faqs.map((faq, index) => (
 
-          {/* FAQ 1 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 0 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(0)}
+            <div
+              className={`faq-item ${
+                openFaq === index ? "active" : ""
+              }`}
+              key={index}
             >
 
-              <span>
-                What is NEERAJ ENTERPRISES?
-              </span>
+              <button
+                onClick={() =>
+                  setOpenFaq(
+                    openFaq === index ? null : index
+                  )
+                }
+              >
 
-              <span className="faq-icon">
-                {openFaq === 0 ? "−" : "+"}
-              </span>
+                <span>{faq.question}</span>
 
-            </button>
+                <span className="faq-icon">
+                  {openFaq === index ? "−" : "+"}
+                </span>
 
-            <div className="faq-answer">
+              </button>
 
-              <p>
-                NEERAJ ENTERPRISES is a Micro Proprietary Enterprise
-                based in Indore, Madhya Pradesh.
-              </p>
+              {openFaq === index && (
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              )}
 
             </div>
 
-          </div>
-
-
-          {/* FAQ 2 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 1 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(1)}
-            >
-
-              <span>
-                What is the main business activity?
-              </span>
-
-              <span className="faq-icon">
-                {openFaq === 1 ? "−" : "+"}
-              </span>
-
-            </button>
-
-            <div className="faq-answer">
-
-              <p>
-                The registered business activity is wholesale trading,
-                including wholesale of fruits and vegetables.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* FAQ 3 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 2 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(2)}
-            >
-
-              <span>
-                Where is the business located?
-              </span>
-
-              <span className="faq-icon">
-                {openFaq === 2 ? "−" : "+"}
-              </span>
-
-            </button>
-
-            <div className="faq-answer">
-
-              <p>
-                NEERAJ ENTERPRISES is located at M1 48, BK Sindhi
-                Colony, Sindhi Colony Main Road, Indore, Madhya
-                Pradesh - 452001.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* FAQ 4 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 3 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(3)}
-            >
-
-              <span>
-                When was the business started?
-              </span>
-
-              <span className="faq-icon">
-                {openFaq === 3 ? "−" : "+"}
-              </span>
-
-            </button>
-
-            <div className="faq-answer">
-
-              <p>
-                The date of incorporation and commencement of business
-                is 01/08/2022.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* FAQ 5 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 4 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(4)}
-            >
-
-              <span>
-                How can I contact NEERAJ ENTERPRISES?
-              </span>
-
-              <span className="faq-icon">
-                {openFaq === 4 ? "−" : "+"}
-              </span>
-
-            </button>
-
-            <div className="faq-answer">
-
-              <p>
-                You can contact NEERAJ ENTERPRISES through phone,
-                WhatsApp, email or the website contact form.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          {/* FAQ 6 */}
-
-          <div
-            className={`faq-item ${
-              openFaq === 5 ? "active" : ""
-            }`}
-          >
-
-            <button
-              className="faq-question"
-              onClick={() => toggleFaq(5)}
-            >
-
-              <span>
-                What is the Udyam Registration Number?
-              </span>
-
-              <span className="faq-icon">
-                {openFaq === 5 ? "−" : "+"}
-              </span>
-
-            </button>
-
-            <div className="faq-answer">
-
-              <p>
-                The Udyam Registration Number of NEERAJ ENTERPRISES
-                is UDYAM-MP-20-0027028.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        {/* FAQ CTA */}
-
-        <div className="faq-cta">
-
-          <h3>
-            Looking For Wholesale Supply?
-          </h3>
-
-          <p>
-            Contact NEERAJ ENTERPRISES for your business enquiry.
-          </p>
-
-          <Link
-            to="/contact"
-            className="faq-btn"
-          >
-            Contact Us →
-          </Link>
+          ))}
 
         </div>
 
       </section>
 
+      {/* ================= CTA ================= */}
+      <section className="cta-section">
 
-      {/* =========================
-          CONTACT CTA
-      ========================= */}
+        <div className="cta-container">
 
-      <section className="contact-section">
-
-        <div className="contact-container">
-
-
-          {/* LEFT */}
-
-          <div className="contact-info">
-
-            <span className="section-badge">
-              Let's Connect
-            </span>
+          <div>
+            <span>LET'S GROW TOGETHER</span>
 
             <h2>
-              Need Wholesale
-              <span> Fruits & Vegetables?</span>
+              Ready To Grow Your
+              <strong> Business Online?</strong>
             </h2>
 
             <p>
-              Get in touch with NEERAJ ENTERPRISES for business and
-              wholesale trading enquiries.
+              Let's create a powerful digital marketing strategy
+              for your business.
             </p>
-
-
-            <div className="contact-options">
-
-
-              {/* WHATSAPP */}
-
-              <a
-                href="https://wa.me/919907406837"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contact-option"
-              >
-
-                <div className="contact-icon">
-                  💬
-                </div>
-
-                <div>
-
-                  <span>
-                    WhatsApp
-                  </span>
-
-                  <strong>
-                    Chat With Us
-                  </strong>
-
-                </div>
-
-              </a>
-
-
-              {/* CALL */}
-
-              <a
-                href="tel:+919907406837"
-                className="contact-option"
-              >
-
-                <div className="contact-icon">
-                  📞
-                </div>
-
-                <div>
-
-                  <span>
-                    Call Now
-                  </span>
-
-                  <strong>
-                    +91 99074 06837
-                  </strong>
-
-                </div>
-
-              </a>
-
-
-              {/* EMAIL */}
-
-              <a
-                href="mailto:senneerajdabra257@gmail.com"
-                className="contact-option"
-              >
-
-                <div className="contact-icon">
-                  ✉️
-                </div>
-
-                <div>
-
-                  <span>
-                    Email
-                  </span>
-
-                  <strong>
-                    senneerajdabra257@gmail.com
-                  </strong>
-
-                </div>
-
-              </a>
-
-            </div>
-
           </div>
 
+          <div className="cta-buttons">
 
-          {/* RIGHT BUSINESS CARD */}
-
-          <div className="contact-form-card">
-
-            <h3>
-              NEERAJ ENTERPRISES
-            </h3>
-
-            <p>
-              Business Information
-            </p>
-
-
-            <div className="business-details">
-
-              <div className="business-detail-row">
-
-                <span>
-                  Proprietor
-                </span>
-
-                <strong>
-                  Shri Neeraj Sen
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Enterprise Type
-                </span>
-
-                <strong>
-                  Micro
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Organisation
-                </span>
-
-                <strong>
-                  Proprietary
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Business Activity
-                </span>
-
-                <strong>
-                  Wholesale Trading
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Products
-                </span>
-
-                <strong>
-                  Fruits & Vegetables
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Established
-                </span>
-
-                <strong>
-                  01/08/2022
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Location
-                </span>
-
-                <strong>
-                  Indore, MP
-                </strong>
-
-              </div>
-
-
-              <div className="business-detail-row">
-
-                <span>
-                  Udyam No.
-                </span>
-
-                <strong>
-                  UDYAM-MP-20-0027028
-                </strong>
-
-              </div>
-
-            </div>
-
-
-            <Link
-              to="/contact"
-              className="contact-submit-btn"
-            >
-              Send Business Enquiry →
+            <Link to="/contact" className="cta-primary">
+              Contact Us
             </Link>
+
+            <a
+              href="https://wa.me/919907406837"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-whatsapp"
+            >
+              WhatsApp Us
+            </a>
 
           </div>
 
@@ -1469,10 +540,8 @@ const Home = () => {
 
       </section>
 
-
-    </main>
+    </div>
   );
 };
 
 export default Home;
-

@@ -1,17 +1,16 @@
 .navbar {
   width: 100%;
-  height: 75px;
   background: #ffffff;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e5e7eb;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .navbar-container {
   max-width: 1200px;
-  height: 100%;
+  height: 75px;
   margin: auto;
   padding: 0 25px;
 
@@ -20,74 +19,100 @@
   justify-content: space-between;
 }
 
-/* Logo */
-
 .logo {
+  color: #123b8c;
+  font-size: 21px;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 25px;
-  font-weight: 800;
-  color: #123b8f;
 }
 
-.logo span {
-  color: #1d5fd1;
-}
-
-/* Navigation */
-
-.nav-links {
+.desktop-nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 30px;
 }
 
-.nav-links a {
+.desktop-nav a {
+  color: #344054;
   text-decoration: none;
-  color: #222;
   font-size: 15px;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: #1557c0;
+.desktop-nav a:hover {
+  color: #123b8c;
 }
 
-/* Button */
+/* 3 Lines */
 
-.nav-btn {
+.menu-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu-button span {
+  width: 24px;
+  height: 2px;
+  background: #123b8c;
+  display: block;
+}
+
+/* Menu */
+
+.mobile-menu {
+  position: absolute;
+  top: 75px;
+  right: 20px;
+
+  width: 240px;
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  padding: 12px 0;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 13px 20px;
+
+  color: #344054;
   text-decoration: none;
-  background: #1557c0;
-  color: white;
-  padding: 12px 22px;
-  border-radius: 7px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s;
+
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.nav-btn:hover {
-  background: #0d3f91;
-  transform: translateY(-2px);
+.mobile-menu a:hover {
+  background: #f4f7fc;
+  color: #123b8c;
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
 
-  .nav-links {
+  .desktop-nav {
     display: none;
   }
 
   .navbar-container {
-    padding: 0 18px;
+    height: 68px;
   }
 
-  .logo {
-    font-size: 22px;
-  }
-
-  .nav-btn {
-    padding: 10px 15px;
+  .mobile-menu {
+    top: 68px;
   }
 }
