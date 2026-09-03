@@ -10,10 +10,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Footer from "./components/Footer";
 const App = () => {
   return (
-    <BrowserRouter>
-
+    <BrowserRouter basename="/Neeraj-Enterprises">
       <Navbar />
 
       <Routes>
@@ -22,10 +22,12 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/terms" element={<Terms />} />
-<Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      </Routes>
 
+        {/* Legal Pages */}
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
